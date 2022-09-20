@@ -1,20 +1,21 @@
 {
   "RSpec": {
     "coverage": {
-      "/csce431/spec/feature/integration_spec.rb": {
+      "/csce431/spec/unit/unit_spec.rb": {
         "lines": [
           null,
           1,
           null,
           1,
           1,
+          2,
+          null,
+          null,
+          null,
           1,
           1,
-          1,
-          1,
-          1,
-          1,
-          1,
+          null,
+          null,
           1,
           1,
           1,
@@ -382,88 +383,9 @@
           null
         ]
       },
-      "/csce431/app/controllers/members_controller.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          2,
-          1,
-          null,
-          0,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/csce431/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
       "/csce431/app/models/member.rb": {
         "lines": [
+          1,
           1,
           null
         ]
@@ -476,6 +398,6 @@
         ]
       }
     },
-    "timestamp": 1663711648
+    "timestamp": 1663717728
   }
 }
