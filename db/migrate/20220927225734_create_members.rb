@@ -4,9 +4,10 @@ class CreateMembers < ActiveRecord::Migration[6.1]
       t.integer :uin
       t.string :first_name
       t.string :last_name
-      t.string :classification
       t.string :email
+      t.string :classification
       t.string :arabic_lvl
+      t.string :payment_status
 
       t.timestamps
     end

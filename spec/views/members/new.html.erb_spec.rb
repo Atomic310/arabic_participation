@@ -6,9 +6,10 @@ RSpec.describe "members/new", type: :view do
       uin: 1,
       first_name: "MyString",
       last_name: "MyString",
-      classification: "MyString",
       email: "MyString",
-      arabic_lvl: "MyString"
+      classification: "MyString",
+      arabic_lvl: "MyString",
+      payment_status: "MyString"
     ))
   end
 
@@ -23,11 +24,13 @@ RSpec.describe "members/new", type: :view do
 
       assert_select "input[name=?]", "member[last_name]"
 
-      assert_select "input[name=?]", "member[classification]"
-
       assert_select "input[name=?]", "member[email]"
 
+      assert_select "input[name=?]", "member[classification]"
+
       assert_select "input[name=?]", "member[arabic_lvl]"
+
+      assert_select "input[name=?]", "member[payment_status]"
     end
   end
 end

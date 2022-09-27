@@ -8,9 +8,10 @@
       <th>Uin</th>
       <th>First name</th>
       <th>Last name</th>
-      <th>Classification</th>
       <th>Email</th>
+      <th>Classification</th>
       <th>Arabic lvl</th>
+      <th>Payment status</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -21,9 +22,10 @@
         <td><%= member.uin %></td>
         <td><%= member.first_name %></td>
         <td><%= member.last_name %></td>
-        <td><%= member.classification %></td>
         <td><%= member.email %></td>
+        <td><%= member.classification %></td>
         <td><%= member.arabic_lvl %></td>
+        <td><%= member.payment_status %></td>
         <td><%= link_to 'Show', member %></td>
         <td><%= link_to 'Edit', edit_member_path(member) %></td>
         <td><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>

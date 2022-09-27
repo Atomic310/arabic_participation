@@ -10,6 +10,7 @@ RSpec.describe 'Creating a member', type: :feature do
         fill_in 'member_classification', with: 'Senior'
         fill_in 'member_email', with: 'harrypotter@hotmail.com'
         fill_in 'member_arabic_lvl', with: 'Beginner'
+        fill_in 'member_payment_status', with: 'Yes'
         click_on 'Create Member'
         
         visit members_path
@@ -19,5 +20,6 @@ RSpec.describe 'Creating a member', type: :feature do
         expect(page).to have_content('Senior')
         expect(page).to have_content('harrypotter@hotmail.com')
         expect(page).to have_content('Beginner')
+        expect(page).to have_content('Yes')
     end
 end

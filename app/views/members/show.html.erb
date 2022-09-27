@@ -16,18 +16,23 @@
 </p>
 
 <p>
-  <strong>Classification:</strong>
-  <%= @member.classification %>
-</p>
-
-<p>
   <strong>Email:</strong>
   <%= @member.email %>
 </p>
 
 <p>
+  <strong>Classification:</strong>
+  <%= @member.classification %>
+</p>
+
+<p>
   <strong>Arabic lvl:</strong>
   <%= @member.arabic_lvl %>
+</p>
+
+<p>
+  <strong>Payment status:</strong>
+  <%= @member.payment_status %>
 </p>
 
 <%= link_to 'Edit', edit_member_path(@member) %> |
