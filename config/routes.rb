@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :announcements
+  resources :reviews
   resources :events
   resources :logs
   resources :officers

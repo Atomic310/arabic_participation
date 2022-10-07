@@ -12,9 +12,9 @@
 # of tools you can use to make these specs even more expressive, but we're
 # sticking to rails and rspec-rails APIs to keep things simple and stable.
 
-RSpec.describe "/announcements", type: :request do
+RSpec.describe "/reviews", type: :request do
   
-  # Announcement. As you add validations to Announcement, be sure to
+  # Review. As you add validations to Review, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
     skip("Add a hash of attributes valid for your model")
@@ -26,58 +26,58 @@ RSpec.describe "/announcements", type: :request do
 
   describe "GET /index" do
     it "renders a successful response" do
-      Announcement.create! valid_attributes
-      get announcements_url
+      Review.create! valid_attributes
+      get reviews_url
       expect(response).to be_successful
     end
   end
 
   describe "GET /show" do
     it "renders a successful response" do
-      announcement = Announcement.create! valid_attributes
-      get announcement_url(announcement)
+      review = Review.create! valid_attributes
+      get review_url(review)
       expect(response).to be_successful
     end
   end
 
   describe "GET /new" do
     it "renders a successful response" do
-      get new_announcement_url
+      get new_review_url
       expect(response).to be_successful
     end
   end
 
   describe "GET /edit" do
     it "render a successful response" do
-      announcement = Announcement.create! valid_attributes
-      get edit_announcement_url(announcement)
+      review = Review.create! valid_attributes
+      get edit_review_url(review)
       expect(response).to be_successful
     end
   end
 
   describe "POST /create" do
     context "with valid parameters" do
-      it "creates a new Announcement" do
+      it "creates a new Review" do
         expect {
-          post announcements_url, params: { announcement: valid_attributes }
-        }.to change(Announcement, :count).by(1)
+          post reviews_url, params: { review: valid_attributes }
+        }.to change(Review, :count).by(1)
       end
 
-      it "redirects to the created announcement" do
-        post announcements_url, params: { announcement: valid_attributes }
-        expect(response).to redirect_to(announcement_url(Announcement.last))
+      it "redirects to the created review" do
+        post reviews_url, params: { review: valid_attributes }
+        expect(response).to redirect_to(review_url(Review.last))
       end
     end
 
     context "with invalid parameters" do
-      it "does not create a new Announcement" do
+      it "does not create a new Review" do
         expect {
-          post announcements_url, params: { announcement: invalid_attributes }
-        }.to change(Announcement, :count).by(0)
+          post reviews_url, params: { review: invalid_attributes }
+        }.to change(Review, :count).by(0)
       end
 
       it "renders a successful response (i.e. to display the 'new' template)" do
-        post announcements_url, params: { announcement: invalid_attributes }
+        post reviews_url, params: { review: invalid_attributes }
         expect(response).to be_successful
       end
     end
@@ -89,42 +89,42 @@ RSpec.describe "/announcements", type: :request do
         skip("Add a hash of attributes valid for your model")
       }
 
-      it "updates the requested announcement" do
-        announcement = Announcement.create! valid_attributes
-        patch announcement_url(announcement), params: { announcement: new_attributes }
-        announcement.reload
+      it "updates the requested review" do
+        review = Review.create! valid_attributes
+        patch review_url(review), params: { review: new_attributes }
+        review.reload
         skip("Add assertions for updated state")
       end
 
-      it "redirects to the announcement" do
-        announcement = Announcement.create! valid_attributes
-        patch announcement_url(announcement), params: { announcement: new_attributes }
-        announcement.reload
-        expect(response).to redirect_to(announcement_url(announcement))
+      it "redirects to the review" do
+        review = Review.create! valid_attributes
+        patch review_url(review), params: { review: new_attributes }
+        review.reload
+        expect(response).to redirect_to(review_url(review))
       end
     end
 
     context "with invalid parameters" do
       it "renders a successful response (i.e. to display the 'edit' template)" do
-        announcement = Announcement.create! valid_attributes
-        patch announcement_url(announcement), params: { announcement: invalid_attributes }
+        review = Review.create! valid_attributes
+        patch review_url(review), params: { review: invalid_attributes }
         expect(response).to be_successful
       end
     end
   end
 
   describe "DELETE /destroy" do
-    it "destroys the requested announcement" do
-      announcement = Announcement.create! valid_attributes
+    it "destroys the requested review" do
+      review = Review.create! valid_attributes
       expect {
-        delete announcement_url(announcement)
-      }.to change(Announcement, :count).by(-1)
+        delete review_url(review)
+      }.to change(Review, :count).by(-1)
     end
 
-    it "redirects to the announcements list" do
-      announcement = Announcement.create! valid_attributes
-      delete announcement_url(announcement)
-      expect(response).to redirect_to(announcements_url)
+    it "redirects to the reviews list" do
+      review = Review.create! valid_attributes
+      delete review_url(review)
+      expect(response).to redirect_to(reviews_url)
     end
   end
 end

@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe "announcements/show", type: :view do
+RSpec.describe "reviews/show", type: :view do
   before(:each) do
-    @announcement = assign(:announcement, Announcement.create!(
+    @review = assign(:review, Review.create!(
       uin: 2,
       event_id: 3,
       comment: "MyText",
