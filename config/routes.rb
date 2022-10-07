@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :announcements
+  resources :events
+  resources :logs
+  resources :officers
   resources :members
   root 'home#interface'
   get 'home/interface'

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Uin:</strong>
+  <%= @announcement.uin %>
+</p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @announcement.event_id %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @announcement.comment %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @announcement.rating %>
+</p>
+
+<%= link_to 'Edit', edit_announcement_path(@announcement) %> |
+<%= link_to 'Back', announcements_path %>

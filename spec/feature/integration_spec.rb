@@ -23,3 +23,17 @@ RSpec.describe 'Creating a member', type: :feature do
         expect(page).to have_content('Yes')
     end
 end
+
+RSpec.describe 'Creating an Officer', type: :feature do
+    scenario 'valid inputs' do
+        visit new_officer_path
+        fill_in 'officer_uin', with: 928006659
+        fill_in 'officer_position', with: 'CEO'
+        fill_in 'officer_password', with: 'p@ssword'
+
+        visit officers_path
+        expect(page).to have_content(928006659)
+        expect(page).to have_content('CEO')
+        expect(page).to have_content('p@ssword')
+    end
+end

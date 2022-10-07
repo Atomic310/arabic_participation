@@ -10,10 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_27_225734) do
+ActiveRecord::Schema.define(version: 2022_10_07_175749) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "announcements", force: :cascade do |t|
+    t.integer "uin"
+    t.integer "event_id"
+    t.text "comment"
+    t.integer "rating"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.integer "event_id"
+    t.date "date"
+    t.string "title"
+    t.text "description"
+    t.string "location"
+    t.decimal "price"
+    t.integer "type"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "logs", force: :cascade do |t|
+    t.integer "log_id"
+    t.integer "uin"
+    t.integer "event_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "members", force: :cascade do |t|
     t.integer "uin"
@@ -23,6 +52,14 @@ ActiveRecord::Schema.define(version: 2022_09_27_225734) do
     t.string "classification"
     t.string "arabic_lvl"
     t.string "payment_status"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "officers", force: :cascade do |t|
+    t.integer "uin"
+    t.string "position"
+    t.string "password"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
