@@ -1,4 +1,4 @@
-Introduction
+Introduction: 
 Arabic Participation tracker was built to track Arabic Club event, member and officer data. Club officers will be able to see information about events such as location, cost, attendance and rate the events. Also included is the ability to sort and view past events to see which ones were successful. For member data, officers will be able to view information such as who has or hasn’t payed dues, and which events they have attended. To back up and save data, download of event and member data is available.  
 
 Requirements
