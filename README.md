@@ -43,11 +43,15 @@ Run the app rails server --binding:0.0.0.0
 
 The application can be seen using a browser and navigating to http://localhost:3000/
 
-Environmental Variables/Files
+Environmental Variables/Files:
 N/A
 
-Deployment
-** Add instructions about how to deploy to Heroku
+Deployment: 
+Create a pipeline on heroku.com
+Link pipline to github repo containing the code for application (https://github.com/Ticthach/arabic_participation.git)
+Select branch that will auto update the application
+Deploy the application to heroku and a link will be produced 
+
 
 CI/CD
 TBD
