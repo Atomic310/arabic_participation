@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :uin %>
-    <%= form.number_field :uin %>
+    <%= form.select :uin, Member.order(:uin).map { |member| [member.uin, member.id] }, include_blank: true, id: "id_of_the_user_id_select_box" %>
   </div>
 
   <div class="field">
