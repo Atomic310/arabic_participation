@@ -5,7 +5,7 @@
 <table>
   <thead>
     <tr>
-      <th>Uin</th>
+      <th>Member</th>
       <th>Event</th>
       <th>Comment</th>
       <th>Rating</th>
@@ -16,8 +16,8 @@
   <tbody>
     <% @reviews.each do |review| %>
       <tr>
-        <td><%= review.uin %></td>
-        <td><%= review.event_id %></td>
+        <td><%= Member.where(id: review.member_id).last.uin %></td>
+        <td><%= Event.where(id: review.event_id).last.event_id %></td>
         <td><%= review.comment %></td>
         <td><%= review.rating %></td>
         <td><%= link_to 'Show', review %></td>
@@ -31,3 +31,11 @@
 <br>
 
 <%= link_to 'New Review', new_review_path %>
+
+<br>
+
+<%= link_to 'Events', events_path %>
+
+<br>
+
+<%= link_to 'Members', members_path %>

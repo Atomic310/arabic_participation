@@ -8,7 +8,7 @@ RSpec.describe "events/edit", type: :view do
       description: "MyText",
       location: "MyString",
       price: "9.99",
-      type: 1
+      event_type: 1
     ))
   end
 
@@ -27,7 +27,7 @@ RSpec.describe "events/edit", type: :view do
 
       assert_select "input[name=?]", "event[price]"
 
-      assert_select "input[name=?]", "event[type]"
+      assert_select "input[name=?]", "event[event_type]"
     end
   end
 end
