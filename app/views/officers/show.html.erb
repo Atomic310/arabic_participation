@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Uin:</strong>
+  <%= @officer.uin %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @officer.position %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @officer.password %>
+</p>
+
+<%= link_to 'Edit', edit_officer_path(@officer) %> |
+<%= link_to 'Back', officers_path %>

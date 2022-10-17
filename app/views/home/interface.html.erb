@@ -1,0 +1,39 @@
+<h1>Arabic Club Participation Tracker</h1>
+
+<h2>
+<li class="nav-item">
+    <%= link_to "Sign Up",
+    new_user_registration_path, class:"
+      nav-link" %>
+</li>
+
+<li class="nav-item">
+    <%= link_to "Sign In",
+      new_user_session_path, class:"
+      nav-link" %>
+</li>
+
+<li class="nav-item">
+    <%= link_to "Sign Out",
+      destroy_user_session_path, method: :delete, class:"
+      nav-link" %>
+</li>
+
+<li class="nav-item">
+    <%= link_to "Edit Profile",
+      edit_user_registration_path, class:"
+      nav-link" %>
+</li>
+
+
+</h2>
+
+
+<ul>
+  <%= link_to 'Member', members_path %>
+  <%= link_to 'Officer', officers_path %>
+  <%= link_to 'Log', logs_path %>
+  <%= link_to 'Event', events_path %>
+  <%= link_to 'Review', reviews_path %>
+</ul>
+

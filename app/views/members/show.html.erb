@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Uin:</strong>
+  <%= @member.uin %>
+</p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @member.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @member.last_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @member.email %>
+</p>
+
+<p>
+  <strong>Classification:</strong>
+  <%= @member.classification %>
+</p>
+
+<p>
+  <strong>Arabic lvl:</strong>
+  <%= @member.arabic_lvl %>
+</p>
+
+<p>
+  <strong>Payment status:</strong>
+  <%= @member.payment_status %>
+</p>
+
+<%= link_to 'Edit', edit_member_path(@member) %> |
+<%= link_to 'Back', members_path %>
