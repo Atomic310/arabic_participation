@@ -8,7 +8,7 @@ RSpec.describe "events/show", type: :view do
       description: "MyText",
       location: "Location",
       price: "9.99",
-      type: 3
+      event_type: 3
     ))
   end
 

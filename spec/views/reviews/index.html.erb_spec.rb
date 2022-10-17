@@ -4,13 +4,13 @@ RSpec.describe "reviews/index", type: :view do
   before(:each) do
     assign(:reviews, [
       Review.create!(
-        uin: 2,
+        member_id: 2,
         event_id: 3,
         comment: "MyText",
         rating: 4
       ),
       Review.create!(
-        uin: 2,
+        member_id: 2,
         event_id: 3,
         comment: "MyText",
         rating: 4
