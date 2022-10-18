@@ -1,6 +1,29 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Officers</h1>
+<h2>     
+  <li class="nav-item">
+    <%= link_to "Sign In",
+    new_officer_session_path,class:"nav-link" %>
+  </li>
+
+  <li class="nav-item">
+    <%= link_to "Sign Up",
+    new_officer_registration_path,class:"nav-link" %>
+  </li>
+
+  <li class="nav-item">
+    <%= link_to "Sign Out",
+    destroy_officer_session_path, method: :delete, class:"nav-link" %>
+  </li>
+
+  <li class="nav-item">
+    <%= link_to "Edit Profile",
+    edit_officer_registration_path,class:"nav-link" %>
+  </li>
+
+</h2>
+
 
 <table>
   <thead>
