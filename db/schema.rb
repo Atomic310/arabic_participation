@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2022_10_18_032945) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -25,6 +26,7 @@ ActiveRecord::Schema.define(version: 2022_10_18_032945) do
     t.integer "event_type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "participation"
   end
 
   create_table "logs", force: :cascade do |t|
