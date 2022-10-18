@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "reviews/show", type: :view do
   before(:each) do
     @review = assign(:review, Review.create!(
-      uin: 2,
+      member_id: 2,
       event_id: 3,
       comment: "MyText",
       rating: 4

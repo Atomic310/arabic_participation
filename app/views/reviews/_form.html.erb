@@ -12,13 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :uin %>
-    <%= form.number_field :uin %>
+    <%= form.label :member_id %>
+    <%= form.select :member_id, Member.order(:uin).map { |member| [member.uin, member.id] }, include_blank: true, id: "id_of_the_member_id_select_box" %>
   </div>
 
   <div class="field">
     <%= form.label :event_id %>
-    <%= form.number_field :event_id %>
+    <%= form.select :event_id, Event.order(:event_id).map { |event| [event.event_id, event.id] }, include_blank: true, id: "id_of_the_event_id_select_box" %>
   </div>
 
   <div class="field">
