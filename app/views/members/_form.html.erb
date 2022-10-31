@@ -38,12 +38,12 @@
 
   <div class="field">
     <%= form.label :arabic_lvl %>
-    <%= form.text_field :arabic_lvl %>
+    <%= form.select :arabic_lvl, %w{Beginner Intermediate Advanced}, :prompt => 'Select', required: true %>
   </div>
 
   <div class="field">
     <%= form.label :payment_status %>
-    <%= form.text_field :payment_status %>
+    <%= form.select :payment_status, %w{Paid Unpaid}, :prompt => 'Select', required: true %>
   </div>
 
   <div class="actions">
