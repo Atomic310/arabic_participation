@@ -37,6 +37,7 @@ group :development, :test do
   gem 'rubocop-performance'
   gem 'rubocop-rails'
   gem 'rubocop-rspec'
+  gem 'view_component', require: 'view_component/engine'
 end
 
 group :development do
