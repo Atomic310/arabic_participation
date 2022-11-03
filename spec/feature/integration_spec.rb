@@ -22,6 +22,19 @@ RSpec.describe 'Creating a member', type: :feature do
         expect(page).to have_content('Beginner')
         expect(page).to have_content('Unpaid')
     end
+
+    scenario 'invalid inputs: uin is not 9 digits' do
+        visit new_member_path
+        fill_in 'member_uin', with: 92800665
+        fill_in 'member_first_name', with: 'Harry'
+        fill_in 'member_last_name', with: 'Potter'
+        select('Senior', :from => 'member_classification')
+        fill_in 'member_email', with: 'harrypotter@hotmail.com'
+        select('Beginner', :from => 'member_arabic_lvl')
+        select('Unpaid', :from => 'member_payment_status')
+        click_on 'Create Member'
+        expect(page).to have_content("Uin is the wrong length")
+    end
 end
 
 RSpec.describe 'Updating a Member', type: :feature do
