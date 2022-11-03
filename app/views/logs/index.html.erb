@@ -1,12 +1,24 @@
+<%= stylesheet_link_tag 'logs.css' %>
 <p id="notice"><%= notice %></p>
 
+<body>
 <h1>Logs</h1>
 
-<table>
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Sort By</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="Log.order("log_id")"> Log</a>
+    <a href="Log.order("uin")"> UIN</a>
+    <a href="Log.order("event_id")"> Event</a>
+  </div>
+</div>
+
+
+<table id="myTable2">
   <thead>
     <tr>
       <th>Log</th>
-      <th>Uin</th>
+      <th>UIN</th>
       <th>Event</th>
       <th colspan="3"></th>
     </tr>
@@ -29,3 +41,26 @@
 <br>
 
 <%= link_to 'New Log', new_log_path %>
+
+
+<script>
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+
+</body>
