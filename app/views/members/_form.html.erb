@@ -33,7 +33,7 @@
 
   <div class="field">
     <%= form.label :classification %>
-    <%= form.text_field :classification %>
+    <%= form.select :classification, %w{Freshman Sophomore Junior Senior}, :prompt => 'Select', required: true %>
   </div>
 
   <div class="field">
