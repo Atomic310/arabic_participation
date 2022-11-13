@@ -1,5 +1,6 @@
+<%= stylesheet_link_tag 'logs.css' %>
 <p id="notice"><%= notice %></p>
-
+<body>
 <p>
   <strong>Log:</strong>
   <%= @log.log_id %>
@@ -17,3 +18,5 @@
 
 <%= link_to 'Edit', edit_log_path(@log) %> |
 <%= link_to 'Back', logs_path %>
+
+</body>

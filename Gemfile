@@ -45,6 +45,7 @@ group :development, :test do
   gem 'rubocop-performance'
   gem 'rubocop-rails'
   gem 'rubocop-rspec'
+  gem 'view_component', require: 'view_component/engine'
 end
 
 group :development do
@@ -69,3 +70,4 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'brakeman'
