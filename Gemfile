@@ -29,6 +29,14 @@ gem 'devise', '~> 4.8', '>= 4.8.1'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'rexml'
 
+# For feature_export ***
+gem 'rubyzip', '>= 1.2.1'
+# DEPRECATION WARNING: axlsx_rails has been renamed to caxlsx_rails. See http://github.com/caxlsx
+gem 'axlsx', git: 'https://github.com/randym/axlsx.git', ref: 'c8ac844'
+gem 'axlsx_rails'
+
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
