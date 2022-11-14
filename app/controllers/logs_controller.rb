@@ -3,7 +3,7 @@ class LogsController < ApplicationController
 
   # GET /logs or /logs.json
   def index
-    @logs = Log.all
+    @logs = Log.order(params[:sort])
   end
 
   # GET /logs/1 or /logs/1.json
