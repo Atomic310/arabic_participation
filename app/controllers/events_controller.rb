@@ -1,9 +1,11 @@
 class EventsController < ApplicationController
   before_action :set_event, only: %i[ show edit update destroy ]
+  helper_method :getPart
 
   # GET /events or /events.json
   def index
     @events = Event.all
+	@logs = Log.all
     @reviews = Review.all
     respond_to do |format|
       format.xlsx {
@@ -21,7 +23,9 @@ class EventsController < ApplicationController
 
   # GET /events/new
   def new
+    @events = Event.all
     @event = Event.new
+	@event.update(:event_id => @events.count + 1)
   end
 
   # GET /events/1/edit
@@ -64,6 +68,12 @@ class EventsController < ApplicationController
       format.html { redirect_to events_url, notice: "Event was successfully destroyed." }
       format.json { head :no_content }
     end
+  end
+
+	def getPart
+	@events.each do |event|
+		@events.where(:event_id => event.event_id).update(:participation => @logs.where(:event_id => event.event_id).count)
+	end
   end
 
   private
