@@ -1,0 +1,14 @@
+wb = xlsx_package.workbook
+
+wb.add_worksheet(name: "Events") do |sheet|
+  # Create the header row
+  sheet.add_row ["Event ID", "Date","Title", "Description","Location","Price","Event type","Participation"]
+  # Create entries for each event
+  @events.each do |event|
+    sheet.add_row [event.event_id, event.date,event.title,event.description,event.location,event.price,event.event_type,event.participation]
+
+  @reviews.where(:event_id => event.event_id).each do |review|
+   sheet.add_row [review.member_id, review.rating, review.comment] 
+  end
+  end
+end
