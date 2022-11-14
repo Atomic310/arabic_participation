@@ -52,6 +52,8 @@ Deploy the application to heroku and a link will be produced
 
 Credit:
 Sort Function: http://railscasts.com/episodes/228-sortable-table-columns?view=asciicast
+Search Function: https://medium.com/@ozhorov/how-to-implement-search-feature-in-rails-and-search-across-multiple-tables-f80b7a3825bb
+Export Function: https://medium.com/@JasonCodes/ruby-on-rails-exporting-data-to-excel-b3b204281085
 
 
 CI/CD
