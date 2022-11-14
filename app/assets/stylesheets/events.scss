@@ -1,3 +1,43 @@
 // Place all the styles related to the Events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+body{
+    background-color: maroon;
+    height: auto;
+    color: white;    
+}
+
+
+table, th, td{
+    color: white;
+    font-size: larger;
+    border: 5px solid grey;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+
+tr{
+    text-align: center;
+}
+
+.indexButton{
+    background-color: gray;
+    color: white;
+    font-size: 24px;
+    padding: 14px 40px;
+    display: block;
+}
+
+button:hover{
+    background-color: black;
+}
+
+
+.showButton{
+    background-color: gray;
+    color: white;
+    font-size: 24px;
+    padding: 14px 40px;
+}
+

@@ -1,11 +1,15 @@
+<%= stylesheet_link_tag 'events.css' %>
+<body>
 <p id="notice"><%= notice %></p>
 
 <h1>Events</h1>
-<%=
+<button type="button" class="indexButton"><%=
   link_to 'Download as Excel',
   events_path(format: :xlsx)
-%>
+%></button>
 
+<button type="button" class="indexButton"><%= link_to 'New Event', new_event_path %></button>
+<button onclick="myFunction()" class= "indexButton">Dark Mode</button>
 
 <table>
   <thead>
@@ -43,4 +47,5 @@
 
 <br>
 
-<%= link_to 'New Event', new_event_path %>
+
+</body>

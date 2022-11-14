@@ -1,6 +1,10 @@
+<%= stylesheet_link_tag 'events.css' %>
+<body>
 <h1>Editing Event</h1>
 
 <%= render 'form', event: @event %>
 
-<%= link_to 'Show', @event %> |
-<%= link_to 'Back', events_path %>
+<button type="button" class="showButton"><%= link_to 'Show', @event %></button> |
+<button type="button" class="showButton"><%= link_to 'Back', events_path %></button>
+
+</body>

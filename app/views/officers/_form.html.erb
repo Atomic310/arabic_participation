@@ -1,3 +1,5 @@
+<%= stylesheet_link_tag 'officers.css' %>
+<body>
 <%= form_with(model: officer) do |form| %>
   <% if officer.errors.any? %>
     <div id="error_explanation">
@@ -30,3 +32,4 @@
     <%= form.submit %>
   </div>
 <% end %>
+</body>

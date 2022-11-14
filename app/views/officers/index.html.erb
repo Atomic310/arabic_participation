@@ -1,6 +1,13 @@
+<%= stylesheet_link_tag 'officers.css' %>
+<body>
 <p id="notice"><%= notice %></p>
 
 <h1>Officers</h1>
+
+<button type="button" class="indexButton"><%= link_to 'New Officer', new_officer_path %></button>
+
+<button onclick="myFunction()" class="indexButton">Dark Mode</button>
+
 <h2>     
   <li class="nav-item">
     <%= link_to "Sign In",
@@ -51,12 +58,10 @@
 
 <br>
 
-<%= link_to 'New Officer', new_officer_path %>
-
-<button onclick="myFunction()">Dark Mode</button>
-
 <script>
 function myFunction() {
    var element = document.body;
    element.classList.toggle("dark_mode");
 }
+
+</body>
