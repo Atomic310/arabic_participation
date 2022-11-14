@@ -39,3 +39,11 @@
 <br>
 
 <%= link_to 'Members', members_path %>
+
+<button onclick="myFunction()">Dark Mode</button>
+
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark_mode");
+}
