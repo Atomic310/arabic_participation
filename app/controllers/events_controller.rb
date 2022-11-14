@@ -4,6 +4,15 @@ class EventsController < ApplicationController
   # GET /events or /events.json
   def index
     @events = Event.all
+    @reviews = Review.all
+    respond_to do |format|
+      format.xlsx {
+        response.headers[
+          'Content-Disposition'
+        ] = "attachment; filename=events.xlsx"
+      }
+      format.html { render :index }
+    end
   end
 
   # GET /events/1 or /events/1.json
