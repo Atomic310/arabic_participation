@@ -7,11 +7,13 @@ html{
     height: 100%;
 }
 body{
-    background-image: linear-gradient(180deg, maroon, white);
+    background-color: maroon;
     height: auto;
-    color: white;
+    color: white;    
+}
 
-    
+.dark_mode{
+    background-color: #3c0008;
 }
 
 h1{
@@ -29,7 +31,11 @@ img {
 }
 
 .header{
-    background-color: maroon;
     width: 100%;
+}
+
+.container{
+    width: 100%;
+    text-align: center;
 }
 

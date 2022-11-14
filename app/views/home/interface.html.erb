@@ -6,10 +6,22 @@
 </ul>
 
 <div class="header">
+  <div class="container">
+  <%= image_tag "tamuSeal.png"%>
+  </div>
   <h1>Welcome to the</h1>
   <h1>Arabic Club Participation Tracker</h1>
-  <p> Click on one of the links above to get started!</p>
 </div>
+
+
+<button onclick="myFunction()">Dark Mode</button>
+
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark_mode");
+}
+</script>
 
 
 </body>
