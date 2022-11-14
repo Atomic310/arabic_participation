@@ -10,9 +10,9 @@ class Member < ApplicationRecord
     # search_fn: searches by first name. Otherwise, just returns all members
     # def self.search_fn(fn_search)
     #     if fn_search
-    #         fn = Sushi.find_by(first_name: search)
+    #         fn = Member.find_by(first_name: search)
     #             if fn
-    #                 self.where(sushi_id: sushi_type)
+    #                 self.where(member_id: member_payment_status)
     #             else
     #                 @members = Member.all
     #             end
@@ -21,4 +21,13 @@ class Member < ApplicationRecord
     #     end
     # end
     
+    # filter_paid: returns all memebers who have paid dues
+    def filter_paid
+        @results = Member.all.where(payment_status: "Paid")
+    end
+
+    # filter_unpaid: returns all memebers who have not paid dues
+    def filter_unpaid
+        @results = Member.all.where(payment_status: "Unpaid")
+    end
 end

@@ -17,7 +17,7 @@
   </thead>
 
   <tbody>
-    <% @members.each do |member| %>
+    <% @results.each do |result| %>
       <tr>
         <td><%= member.uin %></td>
         <td><%= member.first_name %></td>
@@ -36,7 +36,6 @@
 
 <br>
 
-<%= link_to 'Paid Members List',  %>
 <%= link_to 'New Member', new_member_path %>
 <br>
 <%= link_to 'Back', root_path %>
