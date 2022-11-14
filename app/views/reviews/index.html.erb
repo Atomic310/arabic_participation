@@ -1,3 +1,5 @@
+<%= stylesheet_link_tag 'reviews.css' %>
+<body>
 <p id="notice"><%= notice %></p>
 
 <h1>Reviews</h1>
@@ -7,12 +9,17 @@
   <div>
     <%= search_field_tag :search, params[:search], placeholder: "Type ", class: "form-control" %>
     <div>
-      <%= button_tag "Search Comments", :name => nil%>
+    <%= button_tag "Search Comments", :name => nil%>
     </div>
   </div>
 <% end %>
 
 <br>
+
+<button type="button" class="indexButton"><%= link_to 'New Review', new_review_path %></button>
+
+<button onclick="myFunction()" class="indexButton">Dark Mode</button>
+
 
 <table>
   <thead>
@@ -42,20 +49,11 @@
 
 <br>
 
-<%= link_to 'New Review', new_review_path %>
-
-<br>
-
-<%= link_to 'Events', events_path %>
-
-<br>
-
-<%= link_to 'Members', members_path %>
-
-<button onclick="myFunction()">Dark Mode</button>
 
 <script>
 function myFunction() {
    var element = document.body;
    element.classList.toggle("dark_mode");
 }
+
+</body>
