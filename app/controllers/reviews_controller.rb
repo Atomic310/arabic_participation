@@ -1,9 +1,20 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: %i[ show edit update destroy ]
+  helper_method :sort_column, :sort_direction
 
   # GET /reviews or /reviews.json
   def index
-    @reviews = Review.all
+    @reviews = Review.order(sort_column + ' ' + sort_direction)
+  end
+
+  # Searches table
+  def search 
+    if params[:search].blank?
+      redirect_to reviews_path and return 
+    else 
+      @parameter = params[:search].downcase
+      @results = Review.all.where("lower(comment) LIKE :search", search: "%#{@parameter}%")
+    end
   end
 
   # GET /reviews/1 or /reviews/1.json
@@ -66,5 +77,13 @@ class ReviewsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def review_params
       params.require(:review).permit(:member_id, :event_id, :comment, :rating)
+    end
+
+    def sort_column
+      Review.column_names.include?(params[:sort]) ? params[:sort] : "member_id"
+    end
+    
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ?  params[:direction] : "asc"
     end
 end

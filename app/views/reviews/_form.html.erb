@@ -28,7 +28,7 @@
 
   <div class="field">
     <%= form.label :rating %>
-    <%= form.number_field :rating %>
+    <%= form.select :rating, options_for_select(1..5), :prompt => 'Select', required: true%>
   </div>
 
   <div class="actions">
