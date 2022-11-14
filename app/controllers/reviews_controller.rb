@@ -7,6 +7,16 @@ class ReviewsController < ApplicationController
     @reviews = Review.order(sort_column + ' ' + sort_direction)
   end
 
+  # Searches table
+  def search 
+    if params[:search].blank?
+      redirect_to reviews_path and return 
+    else 
+      @parameter = params[:search].downcase
+      @results = Review.all.where("lower(comment) LIKE :search", search: "%#{@parameter}%")
+    end
+  end
+
   # GET /reviews/1 or /reviews/1.json
   def show
   end
