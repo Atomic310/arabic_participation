@@ -29,17 +29,15 @@ rspec spec/
 Execute Code
 Run the following code in Powershell if using windows or the terminal using Linux/Mac
 
-cd arabic_participation
+"cd arabic_participation"
 
-docker run --rm -it --volume "$(pwd):/rails_app" -e DATABASE_USER=test_app -e DATABASE_PASSWORD=test_password -p 3000:3000 dmartinez05/ruby_rails_postgresql:latest
+Run docker image "docker run --rm -it --volume "$(pwd):/rails_app" -e DATABASE_USER=test_app -e DATABASE_PASSWORD=test_password -p 3000:3000 dmartinez05/ruby_rails_postgresql:latest"
 
-cd rails_app
+Navigate to app "cd rails_app"
 
-Install the app
+Install the app "bundle install && rails webpacker:install && rails db:create && db:migrate"
 
-bundle install && rails webpacker:install && rails db:create && db:migrate
-
-Run the app rails server --binding:0.0.0.0
+Run the app "rails server --binding=0.0.0.0"
 
 The application can be seen using a browser and navigating to http://localhost:3000/
 
@@ -51,6 +49,9 @@ Create a pipeline on heroku.com
 Link pipline to github repo containing the code for application (https://github.com/Ticthach/arabic_participation.git)
 Select branch that will auto update the application
 Deploy the application to heroku and a link will be produced 
+
+Credit:
+Sort Function: http://railscasts.com/episodes/228-sortable-table-columns?view=asciicast
 
 
 CI/CD
