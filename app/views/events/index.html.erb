@@ -40,9 +40,12 @@
         <td><%= event.event_type %></td>
 		<td><%= event.participation %></td>
         <td><%= link_to 'Show', event %></td>
-        <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-		<% getPart %>
+        
+        <% if officer_signed_in? %>
+          <td><%= link_to 'Edit', edit_event_path(event) %></td>
+          <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+          <% getPart %>
       </tr>
     <% end %>
   </tbody>
