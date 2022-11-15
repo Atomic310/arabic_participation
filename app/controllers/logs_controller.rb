@@ -67,4 +67,5 @@ class LogsController < ApplicationController
     def log_params
       params.require(:log).permit(:log_id, :uin, :event_id)
     end
+
 end

@@ -1,6 +1,9 @@
+<%= stylesheet_link_tag 'officers.css' %>
+<body>
 <h1>Editing Officer</h1>
 
 <%= render 'form', officer: @officer %>
 
-<%= link_to 'Show', @officer %> |
-<%= link_to 'Back', officers_path %>
+<button type="button" class="showButton"><%= link_to 'Show', @officer %></button> |
+<button type="button" class="showButton"><%= link_to 'Back', officers_path %></button>
+</body>

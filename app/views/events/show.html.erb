@@ -1,3 +1,5 @@
+<%= stylesheet_link_tag 'events.css' %>
+<body>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -40,5 +42,7 @@
   <%= @event.participation %>
 </p>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<button type="button" class="showButton"><%= link_to 'Edit', edit_event_path(@event) %></button> |
+<button type="button" class="showButton"><%= link_to 'Back', events_path %></button>
+
+</body>

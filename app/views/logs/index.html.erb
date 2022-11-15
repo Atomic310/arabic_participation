@@ -1,10 +1,14 @@
 <%= stylesheet_link_tag 'logs.css' %>
 <p id="notice"><%= notice %></p>
 
-<body class="log">
+<body>
+
 <h1>Logs</h1>
 
-<table id="myTable2">
+<button type="button" class="indexButton"><%= link_to 'New Log', new_log_path %></button>
+<button onclick="myFunction()" class= "indexButton">Dark Mode</button>
+
+<table>
   <thead>
     <tr>
       <th><%= link_to "Log", :sort => "log_id"%> </th>
@@ -28,18 +32,11 @@
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Log', new_log_path %>
-
-<button onclick="myFunction()">Dark Mode</button>
-
 <script>
 function myFunction() {
    var element = document.body;
    element.classList.toggle("dark_mode");
 }
-
-
+</script>
 
 </body>

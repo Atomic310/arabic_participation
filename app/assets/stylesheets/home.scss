@@ -6,10 +6,12 @@
 html{
     height: 100%;
 }
+
 body{
     background-color: maroon;
     height: auto;
     color: white;    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .dark_mode{
@@ -38,4 +40,18 @@ img {
     width: 100%;
     text-align: center;
 }
+
+button:hover{
+    background-color: rgb(219, 216, 216);
+}
+
+
+.homeButton{
+    background-color: gray;
+    color: white;
+    font-size: 24px;
+    padding: 14px 40px;
+    text-align: center;
+}
+
 
