@@ -739,6 +739,7 @@
           1,
           null,
           1,
+          1,
           null
         ]
       },
@@ -799,6 +800,11 @@
       "/csce431/app/helpers/reviews_helper.rb": {
         "lines": [
           1,
+          1,
+          0,
+          0,
+          0,
+          null,
           null
         ]
       },
@@ -879,6 +885,16 @@
       "/csce431/app/controllers/application_controller.rb": {
         "lines": [
           1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
           null
         ]
       },
@@ -909,8 +925,16 @@
           null,
           null
         ]
+      },
+      "/csce431/app/models/review.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1667437176
+    "timestamp": 1668490465
   }
 }
