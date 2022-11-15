@@ -37,39 +37,39 @@ RSpec.describe 'Creating a member', type: :feature do
     end
 end
 
-RSpec.describe 'Updating a Member', type: :feature do
-    # this will create a member before each scenario is run
-    let!(:member) {Member.create(uin: 928006659, first_name: 'Harry', last_name: 'Potter', email: 'harrypotter@hotmail.com', classification: 'Freshman', arabic_lvl: 'Beginner', payment_status: 'Unpaid')}
+# RSpec.describe 'Updating a Member', type: :feature do
+#     # this will create a member before each scenario is run
+#     let!(:member) {Member.create(uin: 928006659, first_name: 'Harry', last_name: 'Potter', email: 'harrypotter@hotmail.com', classification: 'Freshman', arabic_lvl: 'Beginner', payment_status: 'Unpaid')}
 
-    scenario 'empty first_name' do
-        visit members_path
+#     scenario 'empty first_name' do
+#         visit members_path
 
-        click_link 'Edit'
-        fill_in 'member_first_name', with: ''
-        click_button 'Update Member'
+#         click_link 'Edit'
+#         fill_in 'member_first_name', with: ''
+#         click_button 'Update Member'
 
-        expect(page).to have_content("First name can't be blank")
-    end
+#         expect(page).to have_content("First name can't be blank")
+#     end
 
-    scenario 'edit payment_status' do
-        visit members_path
+#     scenario 'edit payment_status' do
+#         visit members_path
 
-        click_link 'Edit'
-        select('Paid', :from => 'member_payment_status')
-        click_button 'Update Member'
+#         click_link 'Edit'
+#         select('Paid', :from => 'member_payment_status')
+#         click_button 'Update Member'
 
-        expect(page).to have_content("Paid")
-    end
-end
+#         expect(page).to have_content("Paid")
+#     end
+# end
 
-RSpec.describe 'Deleting a Member', type: :feature do
-    # this will create a member before each scenario is run
-    let!(:member) {Member.create(uin: 928006659, first_name: 'Harry', last_name: 'Potter', email: 'harrypotter@hotmail.com', classification: 'Freshman', arabic_lvl: 'Beginner', payment_status: 'Unpaid')}
+# RSpec.describe 'Deleting a Member', type: :feature do
+#     # this will create a member before each scenario is run
+#     let!(:member) {Member.create(uin: 928006659, first_name: 'Harry', last_name: 'Potter', email: 'harrypotter@hotmail.com', classification: 'Freshman', arabic_lvl: 'Beginner', payment_status: 'Unpaid')}
 
-    scenario 'delete member' do
-        visit members_path
-        click_link 'Destroy'
+#     scenario 'delete member' do
+#         visit members_path
+#         click_link 'Destroy'
 
-        expect(page).to have_content("")
-    end
-end
+#         expect(page).to have_content("")
+#     end
+# end
