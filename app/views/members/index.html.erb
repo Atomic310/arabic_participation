@@ -4,7 +4,10 @@
 
 <h1>Members</h1>
 
-<button type="button" class="indexButton"><%= link_to 'New Member', new_member_path %></button>
+<% if officer_signed_in? %>
+  <button type="button" class="indexButton"><%= link_to 'New Member', new_member_path %></button>
+<% end %>
+
 <button type="button" class="indexButton"><%= link_to 'Back', root_path %></button>
 
 <button onclick="myFunction()" class= "indexButton">Dark Mode</button>
@@ -35,9 +38,11 @@
         <td><%= member.arabic_lvl %></td>
         <td><%= member.payment_status %></td>
         <td><%= link_to 'Show', member %></td>
-        <td><%= link_to 'Edit', edit_member_path(member) %></td>
-        <td><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <% if officer_signed_in? %>
+          <td><%= link_to 'Edit', edit_member_path(member) %></td>
+          <td><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+        </tr>
     <% end %>
   </tbody>
 </table>

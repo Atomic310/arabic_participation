@@ -42,7 +42,10 @@
   <%= @event.participation %>
 </p>
 
+<% if officer_signed_in? %>
 <button type="button" class="showButton"><%= link_to 'Edit', edit_event_path(@event) %></button> |
+<% end %>
+
 <button type="button" class="showButton"><%= link_to 'Back', events_path %></button>
 
 </body>
