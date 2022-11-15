@@ -22,12 +22,23 @@ tr{
     text-align: center;
 }
 
-.dropbtn {
-    background-color: white;
-    color: maroon;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
+.indexButton{
+    background-color: gray;
+    color: white;
+    font-size: 24px;
+    padding: 14px 40px;
+    display: block;
+}
+
+button:hover{
+    background-color: black;
+}
+
+
+.showButton{
+    background-color: gray;
+    color: white;
+    font-size: 24px;
+    padding: 14px 40px;
+}
 
