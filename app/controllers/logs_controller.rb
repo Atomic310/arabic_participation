@@ -13,6 +13,8 @@ class LogsController < ApplicationController
   # GET /logs/new
   def new
     @log = Log.new
+	@logs = Log.all
+	@log.update(:log_id => @logs.count + 1)
   end
 
   # GET /logs/1/edit
