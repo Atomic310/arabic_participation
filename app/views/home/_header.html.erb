@@ -7,13 +7,19 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         
-     
-        <%= link_to "Members", members_path, class:"nav-link" %>
-        <%= link_to "Officers", officers_path, class:"nav-link" %>
-        <%= link_to "Logs", logs_path, class:"nav-link" %>
-        <%= link_to "Events", events_path, class:"nav-link" %>
-        <%= link_to "Reviews", reviews_path, class:"nav-link" %>
-        
+        <% if officer_signed_in? %>
+          <%= link_to "Members", members_path, class:"nav-link" %>
+          <%= link_to "Officers", officers_path, class:"nav-link" %>
+          <%= link_to "Attendance Logs", logs_path, class:"nav-link" %>
+          <%= link_to "Events", events_path, class:"nav-link" %>
+          <%= link_to "Reviews", reviews_path, class:"nav-link" %>
+          <%= link_to "Sign Out", destroy_officer_session_path, method: :delete, class:"nav-link" %>
+        <% else %>
+          <%= link_to "Members", members_path, class:"nav-link" %>
+          <%= link_to "Attendance Sheet", new_log_path, class:"nav-link" %>
+          <%= link_to "Events", events_path, class:"nav-link" %>
+          <%= link_to "Sign In", new_officer_session_path, class:"nav-link" %>
+        <% end %>
        
       </div>
     </div>

@@ -4,7 +4,8 @@
 
 <%= render 'form', log: @log %>
 
-<button type="button" class="showButton"><%= link_to 'Show', @log %></button> |
-<button type="button" class="showButton"><%= link_to 'Back', logs_path %></button>
 
+<% if officer_signed_in? %>
+<button type="button" class="showButton"><%= link_to 'Back', logs_path %></button>
+<% end %>
 </body>
