@@ -6,10 +6,10 @@
 
 <% if officer_signed_in? %>
   <button type="button" class="indexButton"><%= link_to 'New Member', new_member_path %></button>
+  <button type="button" class="indexButton"><%= link_to 'Reset All Payment Status', reset_path, method: "put", data: { confirm: 'Are you sure?' } %></button>
 <% end %>
 
 <button type="button" class="indexButton"><%= link_to 'Back', root_path %></button>
-
 <button onclick="myFunction()" class= "indexButton">Dark Mode</button>
 
 

@@ -10,9 +10,9 @@ class Member < ApplicationRecord
     # search_fn: searches by first name. Otherwise, just returns all members
     # def self.search_fn(fn_search)
     #     if fn_search
-    #         fn = Sushi.find_by(first_name: search)
+    #         fn = Member.find_by(first_name: search)
     #             if fn
-    #                 self.where(sushi_id: sushi_type)
+    #                 self.where(member_id: member_uin)
     #             else
     #                 @members = Member.all
     #             end
@@ -21,4 +21,13 @@ class Member < ApplicationRecord
     #     end
     # end
     
+    # 
+    # def self.update
+    #     say_with_time "Updating members..." do
+    #         Member.find(:all).each do |m|
+    #             m.update_attribute :myattribute, 'Unpaid'
+    #         end
+    #     end
+    # end
+
 end

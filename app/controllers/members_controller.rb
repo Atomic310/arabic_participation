@@ -6,6 +6,13 @@ class MembersController < ApplicationController
     @members = Member.all
   end
 
+  def reset
+    Member.all.each do |m|
+        m.update_attribute :payment_status, 'Unpaid'
+    end
+    redirect_to members_path
+  end
+
   # GET /members/1 or /members/1.json
   def show
   end
