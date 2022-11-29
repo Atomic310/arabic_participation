@@ -2,10 +2,12 @@
 <body>
 <p id="notice"><%= notice %></p>
 
+<% if officer_signed_in? %>
 <p>
   <strong>Uin:</strong>
   <%= @member.uin %>
 </p>
+<% end %>
 
 <p>
   <strong>First name:</strong>
