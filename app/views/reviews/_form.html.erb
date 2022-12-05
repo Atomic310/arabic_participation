@@ -15,7 +15,7 @@
 
   <div class="field">
     <%= form.label :member_id %>
-    <%= form.select :member_id, Member.order(:uin).map { |member| [member.uin, member.id] }, include_blank: true, id: "id_of_the_member_id_select_box" %>
+    <%= form.select :member_id, Officer.order(:uin).map { |officer| [officer.uin, officer.id] }, include_blank: true, id: "id_of_the_member_id_select_box" %>
   </div>
 
   <div class="field">

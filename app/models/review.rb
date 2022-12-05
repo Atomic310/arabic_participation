@@ -1,4 +1,4 @@
 class Review < ApplicationRecord
-    belongs_to :member 
+    belongs_to :officer 
     belongs_to :event
 end

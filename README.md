@@ -91,7 +91,7 @@ Run docker image "docker run --rm -it --volume "$(pwd):/rails_app" -e DATABASE_U
 
 Navigate to app "cd rails_app"
 
-Install the app "bundle install && rails webpacker:install && rails db:create && db:migrate"
+Install the app "bundle install && rails webpacker:install && rails db:create && rails db:migrate"
 
 Run the app "rails server --binding=0.0.0.0"
 

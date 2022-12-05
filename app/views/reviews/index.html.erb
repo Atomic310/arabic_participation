@@ -38,7 +38,7 @@
     <tbody>
       <% @reviews.each do |review| %>
         <tr>
-          <td><%= Member.where(id: review.member_id).last.uin %></td>
+          <td><%= Officer.where(id: review.member_id).last.uin %></td>
           <td><%= Event.where(id: review.event_id).last.event_id %></td>
           <td><%= review.comment %></td>
           <td><%= review.rating %></td>
