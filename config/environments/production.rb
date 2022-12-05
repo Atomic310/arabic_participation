@@ -119,5 +119,5 @@ Rails.application.configure do
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
   #FOR DEVISE GEM MAKE SURE THIS IS CORRECT TO GET EMAILS FROM WEBAPP
-  #config.action_mailer.default_url_options = { host: 'https://arabic-participation-tracker.herokuapp.com/', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'https://arabic-attendance-tracker.herokuapp.com/'}
 end
