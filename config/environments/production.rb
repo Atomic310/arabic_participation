@@ -119,5 +119,16 @@ Rails.application.configure do
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
   #FOR DEVISE GEM MAKE SURE THIS IS CORRECT TO GET EMAILS FROM WEBAPP
-  config.action_mailer.default_url_options = { host: 'https://arabic-attendance-tracker.herokuapp.com/'}
+  #config.action_mailer.default_url_options = { host: 'https://arabic-attendance-tracker.herokuapp.com/'}
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = { :host => 'arabic-attendance-tracker.heroku.com' }
+  ActionMailer::Base.smtp_settings = {
+  :address    => "smtp.sendgrid.net",
+  :port       => 25,
+  :user_name  => ENV['SENDGRID_USERNAME'],
+  :password   => ENV['SENDGRID_PASSWORD'],
+  :domain     => ENV['SENDGRID_DOMAIN'],
+  :authentication  => :plain
+}
 end
