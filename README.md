@@ -1,4 +1,5 @@
 Introduction: 
+WEB APP LINK: https://arabic-attendance-tracker.herokuapp.com/
 Arabic Participation tracker was built to track Arabic Club event, member and officer data. Club officers will be able to see information about events such as location, cost, attendance and rate the events. Also included is the ability to sort and view past events to see which ones were successful. For member data, officers will be able to view information such as who has or hasn’t payed dues, and which events they have attended. To back up and save data, download of event data is available.  
 
 Requirements
@@ -105,16 +106,17 @@ Create a pipeline on heroku.com
 Link pipline to github repo containing the code for application (https://github.com/Ticthach/arabic_participation.git)
 Select branch that will auto update the application
 Deploy the application to heroku and a link will be produced 
+Deploy link: https://arabic-attendance-tracker.herokuapp.com/
+
 
 Credit:
 Sort Function: http://railscasts.com/episodes/228-sortable-table-columns?view=asciicast
 Search Function: https://medium.com/@ozhorov/how-to-implement-search-feature-in-rails-and-search-across-multiple-tables-f80b7a3825bb
 Export Function: https://medium.com/@JasonCodes/ruby-on-rails-exporting-data-to-excel-b3b204281085
 
-CI/CD
-CI:
-CD: 
-Github actions: 
+CI/CD & Github actions
+CI: For continuous integration we used github actions by creating a workflow.yml file which contains the tests needed to be run including brakeman and rubocop tests. This automated process happens every time we push changes to the code base. The important part is that this is automated so that we do not have to take time or forget to do it, the results are organized for us in github this enables us to have a high quality code base. 
+CD: For continuous deployment  we used heroku by creating a deployment pipeline that consists of two apps, one for testing and for main deployment. When a pull request is merged to our main branch, the test app will automatically start updating and display the new changes. The importance of this quick and automated turnaround between changes allows is we are enabled to quickly test features while still having another fully functional deployment app, our client always has a working app to interact with. 
 
 Support
 Admins looking for support should can fill out the feedback form on the homepage to communicate any comments and concerns. There is documention that has been passed to the client contianing a guide to the web app which provides support for admins and non admins. Helpful examples have been included in the website front end to give users an idea of how to use the web app and specifically what should be inputed for some forms. 
